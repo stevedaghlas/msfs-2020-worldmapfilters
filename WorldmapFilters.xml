@@ -1,0 +1,367 @@
+﻿<?xml version= "1.0" encoding= "utf-8" ?> 
+<SimBase.Document Type="WorldmapFilters" version="1.0">
+
+	<WorldmapFilters.FilterSection>
+		<Title>TT:MENU.WORLD_FILTER_SECTION_MAP</Title>
+		<Descr>TT:MENU.WORLD_FILTER_SECTION_MAP_DESC</Descr>
+		<id>FILTER_SECTION_MAP</id>
+
+		<FilterDefinition>
+			<FilterID>MAP_BACKGROUND</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_MAP_BACKGROUND</Title>
+			<Descr>TT:MENU.WORLD_FILTER_MAP_BACKGROUND_DESC</Descr>
+			<ValueType>MAPTYPE</ValueType>
+			<MapType>SATELLITE</MapType>
+			<id>FILTER_MAP_BACKGROUND</id>
+		</FilterDefinition>
+		
+		<FilterDefinition>
+			<FilterID>MAP_LIGHTING</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_MAP_LIGHTING</Title>
+			<Descr>TT:MENU.WORLD_FILTER_MAP_LIGHTING_DESC</Descr>
+			<ValueType>LIGHTTYPE</ValueType>
+			<LightType>SUNLIGHT</LightType>
+			<id>FILTER_MAP_LIGHTING</id>
+			<Visible>FALSE</Visible>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>WEATHER_LAYER</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_WEATHER_LAYER</Title>
+			<Descr>TT:MENU.WORLD_FILTER_WEATHER_LAYER_DESC</Descr>
+			<ValueType>WEATHERLAYER</ValueType>
+			<WeatherLayer>CLOUDS</WeatherLayer>
+			<id>FILTER_WEATHER_LAYER</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>WEATHER_WIND_PARTICLES</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_WEATHER_WIND_PARTICLES</Title>
+			<Descr>TT:MENU.WORLD_FILTER_WEATHER_WIND_PARTICLES_DESC</Descr>
+			<ValueType>ALTLEVEL</ValueType>
+			<AltLevel>OFF</AltLevel>
+			<id>FILTER_WEATHER_WIND_PARTICLES</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>PLANE_FRIEND</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_PLANE_FRIEND</Title>
+			<Descr>TT:MENU.WORLD_FILTER_PLANE_FRIEND_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_PLANE_FRIEND</id>
+		</FilterDefinition>
+		
+		<FilterDefinition>
+			<FilterID>PLANE_TRAFFIC</FilterID>
+			<Title>$$:INVISIBLE</Title>
+			<Descr>$$:INVISIBLE</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<Visible>FALSE</Visible>
+			<id>FILTER_PLANE_TRAFFIC</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>THIRD_PARTY_CONTENT</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_THIRD_PARTY_CONTENT</Title>
+			<Descr>TT:MENU.WORLD_FILTER_THIRD_PARTY_CONTENT_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_THIRD_PARTY_CONTENT</id>
+		</FilterDefinition>
+		
+	</WorldmapFilters.FilterSection>
+
+	<WorldmapFilters.FilterSection>
+		<Title>TT:MENU.WORLD_FILTER_SECTION_AIRPORTS</Title>
+		<Descr>TT:MENU.WORLD_FILTER_SECTION_AIRPORTS_DESC</Descr>
+		<id>FILTER_SECTION_AIRPORTS</id>
+
+		<!--<FilterDefinition>
+			<FilterID>TYPE_STAR_AIRPORT</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_STAR_AIRPORT</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_STAR_AIRPORT_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_STAR_AIRPORT</id>
+		</FilterDefinition>-->
+
+		<FilterDefinition>
+			<FilterID>TYPE_AIRPORT</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_AIRPORT</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_AIRPORT_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_AIRPORT</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>RUNWAY_HARD</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_RUNWAY_HARD</Title>
+			<Descr>TT:MENU.WORLD_FILTER_RUNWAY_HARD_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_RUNWAY_HARD</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>RUNWAY_GRASS</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_RUNWAY_GRASS</Title>
+			<Descr>TT:MENU.WORLD_FILTER_RUNWAY_GRASS_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_RUNWAY_GRASS</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>RUNWAY_WATER</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_RUNWAY_WATER</Title>
+			<Descr>TT:MENU.WORLD_FILTER_RUNWAY_WATER_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_RUNWAY_WATER</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>RUNWAY_SNOW</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_RUNWAY_SNOW</Title>
+			<Descr>TT:MENU.WORLD_FILTER_RUNWAY_SNOW_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_RUNWAY_SNOW</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>RUNWAY_SAND</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_RUNWAY_SAND</Title>
+			<Descr>TT:MENU.WORLD_FILTER_RUNWAY_SAND_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_RUNWAY_SAND</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>RUNWAY_HELI</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_RUNWAY_HELI</Title>
+			<Descr>TT:MENU.WORLD_FILTER_RUNWAY_HELI_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_RUNWAY_HELI</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>RUNWAY_OTHER</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_RUNWAY_OTHER</Title>
+			<Descr>TT:MENU.WORLD_FILTER_RUNWAY_OTHER_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_RUNWAY_OTHER</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>GLIDER_FRIENDLY</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_GLIDER_FRIENDLY</Title>
+			<Descr>TT:MENU.WORLD_FILTER_GLIDER_FRIENDLY_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_GLIDER_FRIENDLY</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<Visible>FALSE</Visible>
+			<FilterID>STORE_ITEM_CONTENT</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_STORE_ITEMS</Title>
+			<Descr>TT:MENU.WORLD_FILTER_STORE_ITEMS_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>OFF</OnOff>
+			<id>STORE_ITEM_CONTENT</id>
+		</FilterDefinition>
+
+	</WorldmapFilters.FilterSection>
+
+	<WorldmapFilters.FilterSection>
+		<Title>TT:MENU.WORLD_FILTER_SECTION_HELIPORTS</Title>
+		<Descr>TT:MENU.WORLD_FILTER_SECTION_HELIPORTS_DESC</Descr>
+		<id>FILTER_SECTION_HELIPORTS</id>
+
+		<FilterDefinition>
+			<FilterID>TYPE_HELIPORT</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_HELIPORT</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_HELIPORT_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_HELIPORT</id>
+		</FilterDefinition>
+
+	</WorldmapFilters.FilterSection>
+
+	<WorldmapFilters.FilterSection>
+		<Title>TT:MENU.WORLD_FILTER_SECTION_POI</Title>
+		<Descr>TT:MENU.WORLD_FILTER_SECTION_POI_DESC</Descr>
+		<id>FILTER_SECTION_POI</id>
+
+		<!--<FilterDefinition>
+			<FilterID>TYPE_STAR_LANDMARK</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_STAR_LANDMARK</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_STAR_LANDMARK_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_STAR_LANDMARK</id>
+		</FilterDefinition>-->
+
+		<FilterDefinition>
+			<FilterID>TYPE_LANDMARK</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_LANDMARK</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_LANDMARK_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_LANDMARK</id>
+		</FilterDefinition>
+
+		<!--<FilterDefinition>
+			<FilterID>TYPE_STAR_CITY</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_STAR_CITY</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_STAR_CITY_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_STAR_CITY</id>
+		</FilterDefinition>-->
+
+		<FilterDefinition>
+			<FilterID>TYPE_CITY</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_CITY</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_CITY_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_CITY</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>TYPE_FAUNA</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_FAUNA</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_FAUNA_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_FAUNA</id>
+		</FilterDefinition>
+	</WorldmapFilters.FilterSection>
+
+	<!-- Not ready
+	<WorldmapFilters.FilterSection>
+		<Title>TT:MENU.WORLD_FILTER_SECTION_ACTIVITIES</Title>
+		<Descr>TT:MENU.WORLD_FILTER_SECTION_ACTIVITIES_DESC</Descr>
+		<id>FILTER_SECTION_ACTIVITIES</id>
+
+	</WorldmapFilters.FilterSection>
+	-->
+	
+	<WorldmapFilters.FilterSection>
+		<Title>TT:MENU.WORLD_FILTER_SECTION_NAVIGATION</Title>
+		<Descr>TT:MENU.WORLD_FILTER_SECTION_NAVIGATION_DESC</Descr>
+		<id>FILTER_SECTION_NAVIGATION</id>
+
+		<FilterDefinition>
+			<FilterID>MAP_AIRSPACES</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_MAP_AIRSPACES</Title>
+			<Descr>TT:MENU.WORLD_FILTER_MAP_AIRSPACES_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_MAP_AIRSPACES</id>
+		</FilterDefinition>
+
+		<!-- Not ready
+		<FilterDefinition>
+			<FilterID>MAP_AIRWAYS</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_MAP_AIRWAYS</Title>
+			<Descr>TT:MENU.WORLD_FILTER_MAP_AIRWAYS_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>OFF</OnOff>
+			<id>FILTER_MAP_AIRWAYS</id>
+			<Disabled>TRUE</Disabled>
+		</FilterDefinition>
+		-->
+
+		<FilterDefinition>
+			<FilterID>TYPE_NAVAID</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_NAVAID</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_NAVAID_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_NAVAID</id>
+		</FilterDefinition>
+
+		<FilterDefinition>
+			<FilterID>TYPE_RNAV_FIX</FilterID>
+			<Title>TT:MENU.WORLD_FILTER_TYPE_RNAV_FIX</Title>
+			<Descr>TT:MENU.WORLD_FILTER_TYPE_RNAV_FIX_DESC</Descr>
+			<ValueType>ONOFF</ValueType>
+			<OnOff>ON</OnOff>
+			<id>FILTER_TYPE_RNAV_FIX</id>
+		</FilterDefinition>
+
+	</WorldmapFilters.FilterSection>
+
+	
+	<!-- PRESETS -->
+	<WorldmapFilters.FilterPreset>
+		<Title>TT:MENU.WORLD_FILTER_PRESET_SATELLITE</Title>
+		<Descr>TT:MENU.WORLD_FILTER_PRESET_SATELLITE_DESC</Descr>
+		<id>SATELLITE</id>
+		<Icon>worldmap/satellite_map.png</Icon>
+		<Filter FilterID="MAP_BACKGROUND" MapType="BLEND" />
+		<Filter FilterID="WEATHER_LAYER" weatherlayer="CLOUDS" />
+		<!-- <Filter FilterID="ACTIVITY_BUSH" onoff="ON" />
+		<Filter FilterID="ACTIVITY_LANDING" onoff="ON" /> -->
+	</WorldmapFilters.FilterPreset>
+	
+	<WorldmapFilters.FilterPreset>
+		<Title>TT:MENU.WORLD_FILTER_PRESET_MARKETPLACE</Title>
+		<Descr>TT:MENU.WORLD_FILTER_PRESET_MARKETPLACE_DESC</Descr>
+		<id>MARKETPLACE</id>
+		<Icon>worldmap/satellite_map.png</Icon>
+		<Filter FilterID="MAP_BACKGROUND" MapType="SATELLITE" />
+		<Filter FilterID="MAP_LIGHTING" LightType="HEADLIGHT" />
+		<Filter FilterID="WEATHER_LAYER" weatherlayer="OFF" />		
+		<Filter FilterID="TYPE_AIRPORT" onoff="OFF" />				
+		<Filter FilterID="TYPE_AIRPORT" onoff="OFF" />				
+		<Filter FilterID="TYPE_LANDMARK" onoff="OFF" />				
+		<Filter FilterID="TYPE_CITY" onoff="OFF" />				
+		<Filter FilterID="TYPE_FAUNA" onoff="OFF" />				
+		<Filter FilterID="PLANE_TRAFFIC" onoff="OFF" />				
+		<Filter FilterID="PLANE_FRIEND" onoff="OFF" />				
+		<Filter FilterID="STORE_ITEM_CONTENT" onoff="ON" />		
+		
+	</WorldmapFilters.FilterPreset>
+	
+	<WorldmapFilters.FilterPreset>
+		<Title>TT:MENU.WORLD_FILTER_PRESET_IFR</Title>
+		<Descr>TT:MENU.WORLD_FILTER_PRESET_IFR_DESC</Descr>
+		<id>IFR</id>
+		<Icon>worldmap/ifr_map.png</Icon>
+		<Filter FilterID="MAP_BACKGROUND" MapType="IFR" />
+		<Filter FilterID="TYPE_NAVAID" onoff="ON" />
+	</WorldmapFilters.FilterPreset>
+
+	<!-- <WorldmapFilters.FilterPreset> -->
+		<!-- <Title>TT:MENU.WORLD_FILTER_PRESET_VFR</Title> -->
+		<!-- <Descr>TT:MENU.WORLD_FILTER_PRESET_VFR_DESC</Descr> -->
+		<!-- <id>VFR</id> -->
+		<!-- <Icon>worldmap/vfr_map.png</Icon> -->
+		<!-- <MapType>VFR</MapType> -->
+		<!-- <Filter FilterID="MAP_MAX_ELEVATION_FIGURE" onoff="ON" /> -->
+		<!-- <Filter FilterID="WEATHER_LAYER" weatherlayer="CLOUDS" /> -->
+		<!-- <Filter FilterID="TYPE_NAVAID" onoff="ON" /> -->
+	<!-- </WorldmapFilters.FilterPreset> -->
+
+	<WorldmapFilters.FilterPreset>
+		<Title>TT:MENU.WORLD_FILTER_PRESET_WEATHER</Title>
+		<Descr>TT:MENU.WORLD_FILTER_PRESET_WEATHER_DESC</Descr>
+		<id>WEATHER</id>
+		<Icon>worldmap/weather_map.png</Icon>
+		<Filter FilterID="MAP_BACKGROUND" MapType="SATELLITE" />
+		<Filter FilterID="WEATHER_LAYER" weatherlayer="CLOUDS" />
+		<Filter FilterID="WEATHER_WIND_PARTICLES" altlevel="GROUND" />
+	</WorldmapFilters.FilterPreset>
+  
+</SimBase.Document>

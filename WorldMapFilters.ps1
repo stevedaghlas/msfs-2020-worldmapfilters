@@ -59,15 +59,24 @@ if (-not (Test-Path $worldmapFiltersPath)) {
 [xml]$xmlDoc = Get-Content $worldmapFiltersPath
 Write-Host "Loaded WorldmapFilters.xml successfully."
 
-# Define the runway types to ask about
-$runwayTypes = @(
+# Define the filters to ask the user about (runways, heliports, POI, navaids)
+$filterSections = @(
+    @{ id="TYPE_AIRPORT"; label="Airports" },    
     @{ id="RUNWAY_HARD"; label="Hard Runway" },
     @{ id="RUNWAY_GRASS"; label="Grass Runway" },
     @{ id="RUNWAY_WATER"; label="Water Runway" },
     @{ id="RUNWAY_SNOW"; label="Snow Runway" },
-    @{ id="RUNWAY_SAND"; label="Sand Runway" },
+    @{ id="RUNWAY_SAND"; label="Dirt Runway" },
     @{ id="RUNWAY_HELI"; label="Heli Runway" },
-    @{ id="RUNWAY_OTHER"; label="Other Runway" }
+    @{ id="RUNWAY_OTHER"; label="Other Runway" },
+    @{ id="GLIDER_FRIENDLY"; label="Glider Friendly" },
+    @{ id="TYPE_HELIPORT"; label="Heliport" },
+    @{ id="TYPE_LANDMARK"; label="Landmarks" },
+    @{ id="TYPE_CITY"; label="Cities" },
+    @{ id="TYPE_FAUNA"; label="Fauna" },
+    @{ id="MAP_AIRSPACES"; label="Airspaces" },
+    @{ id="TYPE_NAVAID"; label="Navaids" },
+    @{ id="TYPE_RNAV_FIX"; label="RNAV Fixes" }
 )
 
 # Function to ask the user for input
@@ -94,14 +103,14 @@ function Get-UserInput {
     }
 }
 
-# Loop through each runway type and ask the user
-foreach ($runway in $runwayTypes) {
-    $currentStatus = $xmlDoc.SelectSingleNode("//FilterDefinition[FilterID='$($runway.id)']/OnOff").'#text'
-    $userInput = Get-UserInput "$($runway.label)" $currentStatus
+# Loop through each filter and ask the user
+foreach ($filter in $filterSections) {
+    $currentStatus = $xmlDoc.SelectSingleNode("//FilterDefinition[FilterID='$($filter.id)']/OnOff").'#text'
+    $userInput = Get-UserInput "$($filter.label)" $currentStatus
     
     # Update the XML based on user input or retain the current value
     $newStatus = if ($userInput -eq "1") { "ON" } elseif ($userInput -eq "0") { "OFF" } else { $currentStatus }
-    $xmlDoc.SelectSingleNode("//FilterDefinition[FilterID='$($runway.id)']/OnOff").'#text' = $newStatus
+    $xmlDoc.SelectSingleNode("//FilterDefinition[FilterID='$($filter.id)']/OnOff").'#text' = $newStatus
 }
 
 # Overwrite the existing XML file with the updated content
