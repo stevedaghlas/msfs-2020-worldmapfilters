@@ -36,14 +36,18 @@ Write-Log "Steam path: $steamCfgPath"
 Write-Log "Windows Store path: $windowsStoreCfgPath"
 
 # Check which version the user has and get the path to UserCfg.opt
-if (Test-Path $steamCfgPath) {
-    $userCfgPath = $steamCfgPath
-    Write-Log "Found UserCfg.opt at: $steamCfgPath"
-} elseif (Test-Path $windowsStoreCfgPath) {
-    $userCfgPath = $windowsStoreCfgPath
-    Write-Log "Found UserCfg.opt at: $windowsStoreCfgPath"
-} else {
-    Handle-Error "Could not find the UserCfg.opt file. Please make sure MSFS 2020 is installed."
+try {
+    if (Test-Path $steamCfgPath) {
+        $userCfgPath = $steamCfgPath
+        Write-Log "Found UserCfg.opt at: $steamCfgPath"
+    } elseif (Test-Path $windowsStoreCfgPath) {
+        $userCfgPath = $windowsStoreCfgPath
+        Write-Log "Found UserCfg.opt at: $windowsStoreCfgPath"
+    } else {
+        Handle-Error "Could not find the UserCfg.opt file. Please make sure MSFS 2020 is installed."
+    }
+} catch {
+    Handle-Error "Error occurred while searching for the UserCfg.opt file."
 }
 
 # Read the UserCfg.opt file to extract the InstalledPackagesPath
